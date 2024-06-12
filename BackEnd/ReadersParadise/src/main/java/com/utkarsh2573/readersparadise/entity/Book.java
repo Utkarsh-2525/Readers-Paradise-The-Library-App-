@@ -1,14 +1,13 @@
 package com.utkarsh2573.readersparadise.entity;
 
-
-import jakarta.persistence.*;
 import lombok.Data;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "book")
 @Data
-public class Book
-{
+public class Book {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -33,5 +32,5 @@ public class Book
     private String category;
 
     @Column(name = "img")
-    private String image;
+    private String img;
 }

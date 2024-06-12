@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2642aa39-93de-4e50-a472-07cacb0627eb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BackEnd.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/src/main/java/com/utkarsh2573/readersparadise/ReadersParadiseApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/src/main/java/com/utkarsh2573/readersparadise/config/MyDataRestConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/src/main/java/com/utkarsh2573/readersparadise/dao/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/src/main/java/com/utkarsh2573/readersparadise/entity/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadersParadise/src/test/java/com/utkarsh2573/readersparadise/ReadersParadiseApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/readers-paradise/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/readers-paradise/src/index.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2hmOJWXPlDwn5q3JxsSAnmlyKGF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2642aa39-93de-4e50-a472-07cacb0627eb" name="Changes" comment="" />
+      <created>1718195715070</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718195715070</updated>
+      <workItem from="1718195716794" duration="109000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
