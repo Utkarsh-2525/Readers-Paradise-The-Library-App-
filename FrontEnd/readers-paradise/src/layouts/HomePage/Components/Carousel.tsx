@@ -2,6 +2,7 @@ import {ReturnBook} from "./ReturnBook";
 import {useEffect, useState} from "react";
 import BookModel from "../../../Models/BookModel";
 import {SpinnerLoading} from "../../utils/SpinnerLoading";
+import {Link} from "react-router-dom";
 
 export const Carousel = () => {
 
@@ -64,22 +65,22 @@ export const Carousel = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <div className="row d-flex justify-content-center align-items-center">
-                            {books.slice(0,3).map((book) => (
-                                <ReturnBook book={book} key={book.id} />
+                            {books.slice(0, 3).map((book) => (
+                                <ReturnBook book={book} key={book.id}/>
                             ))}
                         </div>
                     </div>
                     <div className="carousel-item">
                         <div className="row d-flex justify-content-center align-items-center">
-                            {books.slice(3,6).map((book) => (
-                                <ReturnBook book={book} key={book.id} />
+                            {books.slice(3, 6).map((book) => (
+                                <ReturnBook book={book} key={book.id}/>
                             ))}
                         </div>
                     </div>
                     <div className="carousel-item">
                         <div className="row d-flex justify-content-center align-items-center">
-                            {books.slice(6,9).map((book) => (
-                                <ReturnBook book={book} key={book.id} />
+                            {books.slice(6, 9).map((book) => (
+                                <ReturnBook book={book} key={book.id}/>
                             ))}
                         </div>
                     </div>
@@ -103,7 +104,9 @@ export const Carousel = () => {
                 </div>
             </div>
             <div className='homepage-carousel-title mt-3'>
-                <a className='btn btn-outline-secondary btn-lg' href="#">View More</a>
+                <Link className='btn btn-outline-secondary btn-lg' to="/search">
+                    View More
+                </Link>
             </div>
         </div>
     );

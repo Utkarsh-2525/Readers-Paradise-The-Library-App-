@@ -2,7 +2,7 @@ import React from "react";
 
 export const Pagination:React.FC<{currentPage:number, totalPages: number, paginate:any}> = (props) => {
     const pageNumbers=[];
-    if(props.currentPage == 1){
+    if(props.currentPage === 1){
         pageNumbers.push(props.currentPage);
         if(props.totalPages >= props.currentPage+1){
             pageNumbers.push(props.currentPage+1);
