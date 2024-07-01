@@ -1,4 +1,8 @@
+import {Link} from "react-router-dom";
+import {useOktaAuth} from "@okta/okta-react";
+
 export const Heros = () => {
+    const {authState} = useOktaAuth();
     return (
         <div>
             <div className='d-none d-lg-block'>
@@ -13,7 +17,12 @@ export const Heros = () => {
                                 The Admin would love to know your pick.
                                 Whether it is to LEARN SOMETHING or to get LOST in an IMAGINATIVE WORLD!
                             </p>
-                            <a href="#" className="btn main-color btn-lg text-white">Sign Up</a>
+                            {authState?.isAuthenticated ?
+                                <Link type='button' className='btn main-color btn-lg text-white' to='search'>Explore Top
+                                    Books</Link>
+                                :
+                                <Link to="/login" className="btn main-color btn-lg text-white">Sign Up</Link>
+                            }
                         </div>
                     </div>
                 </div>
@@ -43,7 +52,12 @@ export const Heros = () => {
                                 The Admin would love to know your pick.
                                 Whether it is to LEARN SOMETHING or to get LOST in an IMAGINATIVE WORLD!
                             </p>
-                            <a href="#" className="btn main-color btn-lg text-white">Sign Up</a>
+                            {authState?.isAuthenticated ?
+                                <Link type='button' className='btn main-color btn-lg text-white' to='search'>Explore Top
+                                    Books</Link>
+                                :
+                                <Link to="/login" className="btn main-color btn-lg text-white">Sign Up</Link>
+                            }
                         </div>
                     </div>
                     <div className="m-2">
