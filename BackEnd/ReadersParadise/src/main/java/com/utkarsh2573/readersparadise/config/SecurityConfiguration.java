@@ -22,7 +22,7 @@ public class SecurityConfiguration {
 
         // protect endpoints
         http.authorizeRequests(configurer ->
-                configurer.requestMatchers("/api/books/secure/**").authenticated().requestMatchers("/api/books/**", "/api/reviews/**").permitAll()).oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()));
+                configurer.requestMatchers("/api/books/secure/**").authenticated().requestMatchers("/api/books/**", "/api/reviews/secure/**").permitAll()).oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()));
 
         // add CORS filter
         http.cors(Customizer.withDefaults());
