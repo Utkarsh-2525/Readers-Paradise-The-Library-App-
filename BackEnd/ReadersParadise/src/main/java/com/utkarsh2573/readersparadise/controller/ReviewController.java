@@ -2,13 +2,10 @@ package com.utkarsh2573.readersparadise.controller;
 
 import com.utkarsh2573.readersparadise.RequestModels.ReviewRequest;
 import com.utkarsh2573.readersparadise.RequestModels.ReviewService;
-import com.utkarsh2573.readersparadise.entity.Review;
 import com.utkarsh2573.readersparadise.utils.ExtractJWT;
-import org.apache.coyote.BadRequestException;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller("http://localhost:3000")
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/api/reviews")
 public class ReviewController {
