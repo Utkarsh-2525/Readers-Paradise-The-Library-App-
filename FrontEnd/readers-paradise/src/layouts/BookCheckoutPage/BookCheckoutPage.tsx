@@ -225,7 +225,7 @@ export const BookCheckoutPage = () => {
                 Authorization: `Bearer ${authState?.accessToken?.accessToken}`,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({reviewRequestModel})
+            body: JSON.stringify(reviewRequestModel)
         };
 
         const returnResponse = await fetch(url, requestOptions);
