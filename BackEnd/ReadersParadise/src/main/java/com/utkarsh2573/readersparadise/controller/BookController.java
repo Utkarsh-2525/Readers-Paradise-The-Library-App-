@@ -1,10 +1,13 @@
 package com.utkarsh2573.readersparadise.controller;
 
 import com.utkarsh2573.readersparadise.entity.Book;
+import com.utkarsh2573.readersparadise.responsemodels.ShelfCurrentLoansResponse;
 import com.utkarsh2573.readersparadise.service.BookService;
 import com.utkarsh2573.readersparadise.utils.ExtractJWT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @CrossOrigin("http://localhost:3000")
 @RestController
@@ -15,6 +18,12 @@ public class BookController {
     @Autowired
     public BookController(BookService bookService) {
         this.bookService = bookService;
+    }
+
+    @GetMapping("/secure/currentloans")
+    public List<ShelfCurrentLoansResponse> CurrentLoans(@RequestHeader(value = "Authorization") String token) throws Exception {
+        String userEmail = ExtractJWT.payloadJWTExtraction(token, "\"sub\"");
+        return bookService.currentLoans(userEmail);
     }
 
     @GetMapping("/secure/currentloans/count")
