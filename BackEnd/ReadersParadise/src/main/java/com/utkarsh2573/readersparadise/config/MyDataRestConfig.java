@@ -1,6 +1,7 @@
 package com.utkarsh2573.readersparadise.config;
 
 import com.utkarsh2573.readersparadise.entity.Book;
+import com.utkarsh2573.readersparadise.entity.History;
 import com.utkarsh2573.readersparadise.entity.Review;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -23,9 +24,11 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
                 HttpMethod.PUT};
 
         config.exposeIdsFor(Book.class);
-//        config.exposeIdsFor(Review.class);
+
         config.exposeIdsFor(Review.class);
-//        config.exposeIdsFor(Message.class);
+
+        config.exposeIdsFor(History.class);
+
 
 //        disableHttpMethods for Book.class
         disableHttpMethods(Book.class, config, theUnsupportedActions);

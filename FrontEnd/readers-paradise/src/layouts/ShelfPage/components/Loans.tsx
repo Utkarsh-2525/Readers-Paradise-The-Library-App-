@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import ShelfCurrentLoans from "../../../Models/ShelfCurrentLoans";
 import {SpinnerLoading} from "../../utils/SpinnerLoading";
 import {LoansModal} from "./LoansModal";
-// import { LoansModal } from './LoansModal';
 
 export const Loans = () => {
 
@@ -60,7 +59,7 @@ export const Loans = () => {
     }
 
     async function returnBook(bookId: number) {
-        const url = `http://localhost:8080/api/books/secure/return/?bookId=${bookId}`;
+        const url = `http://localhost:8080/api/books/secure/return?bookId=${bookId}`;
         const requestOptions = {
             method: 'PUT',
             headers: {
@@ -76,7 +75,7 @@ export const Loans = () => {
     }
 
     async function renewLoan(bookId: number) {
-        const url = `http://localhost:8080/api/books/secure/renew/loan/?bookId=${bookId}`;
+        const url = `http://localhost:8080/api/books/secure/renew/loan?bookId=${bookId}`;
         const requestOptions = {
             method: 'PUT',
             headers: {

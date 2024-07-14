@@ -1,6 +1,6 @@
-package com.utkarsh2573.readersparadise.RequestModels;
+package com.utkarsh2573.readersparadise.service;
 
-import com.utkarsh2573.readersparadise.dao.BookRepository;
+import com.utkarsh2573.readersparadise.RequestModels.ReviewRequest;
 import com.utkarsh2573.readersparadise.dao.ReviewRepository;
 import com.utkarsh2573.readersparadise.entity.Review;
 import org.springframework.beans.factory.annotation.Autowired;

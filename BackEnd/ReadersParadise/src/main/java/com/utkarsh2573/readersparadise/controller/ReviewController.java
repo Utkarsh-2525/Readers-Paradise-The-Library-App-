@@ -1,7 +1,7 @@
 package com.utkarsh2573.readersparadise.controller;
 
 import com.utkarsh2573.readersparadise.RequestModels.ReviewRequest;
-import com.utkarsh2573.readersparadise.RequestModels.ReviewService;
+import com.utkarsh2573.readersparadise.service.ReviewService;
 import com.utkarsh2573.readersparadise.utils.ExtractJWT;
 import org.springframework.web.bind.annotation.*;
 
