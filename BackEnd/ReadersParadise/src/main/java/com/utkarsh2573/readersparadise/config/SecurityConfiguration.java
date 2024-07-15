@@ -16,6 +16,7 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
         // disable Cross Site Request Forgery
         http.csrf(AbstractHttpConfigurer::disable);
 
@@ -23,7 +24,9 @@ public class SecurityConfiguration {
         // protect endpoints
         http.authorizeRequests(configurer ->
                 configurer.requestMatchers("/api/books/secure/" +
-                        "**").authenticated().requestMatchers("/api/books/**", "/api/reviews/secure/**").permitAll()).oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()));
+                        "**").authenticated().requestMatchers("/api/books/**",
+                        "/api/reviews/secure/**",
+                        "/api/messages/secure/**").permitAll()).oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()));
 
         // add CORS filter
         http.cors(Customizer.withDefaults());
