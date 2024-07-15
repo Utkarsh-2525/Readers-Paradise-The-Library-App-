@@ -2,6 +2,7 @@ package com.utkarsh2573.readersparadise.config;
 
 import com.utkarsh2573.readersparadise.entity.Book;
 import com.utkarsh2573.readersparadise.entity.History;
+import com.utkarsh2573.readersparadise.entity.Message;
 import com.utkarsh2573.readersparadise.entity.Review;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -29,12 +30,16 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
         config.exposeIdsFor(History.class);
 
+        config.exposeIdsFor(Message.class);
+
+
 
 //        disableHttpMethods for Book.class
         disableHttpMethods(Book.class, config, theUnsupportedActions);
 //        disableHttpMethods for Review.class
         disableHttpMethods(Book.class, config, theUnsupportedActions);
 //        disableHttpMethods(Message.class, config, theUnsupportedActions);
+        disableHttpMethods(Message.class, config, theUnsupportedActions);
 
         /* Configure CORS Mapping */
         cors.addMapping(config.getBasePath() + "/**")
