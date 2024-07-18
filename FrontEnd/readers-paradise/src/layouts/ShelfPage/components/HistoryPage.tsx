@@ -100,7 +100,7 @@ export const HistoryPage = () => {
                                                 {history.description}
                                             </p>
                                             <hr/>
-                                            <p className="card-text">Checked out on: {history.checkoutDate}</p>
+                                            <p className="card-text">Checked out on: {history.checkOutDate}</p>
                                             <p className="card-text">Returned on: {history.returnDate}</p>
                                         </div>
                                     </div>
