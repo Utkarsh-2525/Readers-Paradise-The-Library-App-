@@ -3,6 +3,8 @@ import {useEffect, useState} from "react";
 import MessageModel from "../../../Models/MessageModel";
 import {SpinnerLoading} from "../../utils/SpinnerLoading";
 import {Pagination} from "../../utils/Pagination";
+import {AdminMessage} from "./AdminMessage";
+import AdminMessageRequest from "../../../Models/AdminMessageRequest";
 
 export const AdminMessages = () => {
 
@@ -67,26 +69,26 @@ export const AdminMessages = () => {
     }
 
 
-    // async function submitResponseToQuestion(id: number, response: string) {
-    //     const url = `http://localhost:8080/api/messages/secure/admin/message`;
-    //     if (authState && authState?.isAuthenticated && id !== null && response !== '') {
-    //         const messageAdminRequestModel: AdminMessageRequest = new AdminMessageRequest(id, response);
-    //         const requestOptions = {
-    //             method: 'PUT',
-    //             headers: {
-    //                 Authorization: `Bearer ${authState?.accessToken?.accessToken}`,
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify(messageAdminRequestModel)
-    //         };
-    //
-    //         const messageAdminRequestModelResponse = await fetch(url, requestOptions);
-    //         if (!messageAdminRequestModelResponse.ok) {
-    //             throw new Error('Something went wrong!');
-    //         }
-    //         setBtnSubmit(!btnSubmit);
-    //     }
-    // }
+    async function submitResponseToQuestion(id: number, response: string) {
+        const url = `http://localhost:8080/api/messages/secure/admin/message`;
+        if (authState && authState?.isAuthenticated && id !== null && response !== '') {
+            const messageAdminRequestModel: AdminMessageRequest = new AdminMessageRequest(id, response);
+            const requestOptions = {
+                method: 'PUT',
+                headers: {
+                    Authorization: `Bearer ${authState?.accessToken?.accessToken}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(messageAdminRequestModel)
+            };
+
+            const messageAdminRequestModelResponse = await fetch(url, requestOptions);
+            if (!messageAdminRequestModelResponse.ok) {
+                throw new Error('Something went wrong!');
+            }
+            setBtnSubmit(!btnSubmit);
+        }
+    }
 
     const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
@@ -96,8 +98,8 @@ export const AdminMessages = () => {
                 <>
                     <h5>Pending Q/A: </h5>
                     {messages.map(message => (
-                        // <AdminMessage message={message} key={message.id} submitResponseToQuestion={submitResponseToQuestion}/>
-                        <p>Questions to be answered!</p>
+                        <AdminMessage message={message} key={message.id} submitResponseToQuestion={submitResponseToQuestion}/>
+                        // <p>Questions to be answered!</p>
                     ))}
                 </>
                 :

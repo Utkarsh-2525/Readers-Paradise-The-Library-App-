@@ -1,5 +1,6 @@
 package com.utkarsh2573.readersparadise.controller;
 
+import com.utkarsh2573.readersparadise.RequestModels.AdminQuestionRequest;
 import com.utkarsh2573.readersparadise.entity.Message;
 import com.utkarsh2573.readersparadise.service.MessagesService;
 import com.utkarsh2573.readersparadise.utils.ExtractJWT;
@@ -23,4 +24,14 @@ public class MessagesController {
         messagesService.postMessage(messageRequest, userEmail);
     }
 
+    @PutMapping("secure/admin/message")
+    public void putMessage(@RequestHeader(value = "Authorization") String token, @RequestBody AdminQuestionRequest adminQuestionRequest) throws Exception {
+        String userEmail = ExtractJWT.payloadJWTExtraction(token, "\"sub\"");
+        String admin = ExtractJWT.payloadJWTExtraction(token, "\"userType\"");
+
+        if (!admin.equals("admin") || admin == null)
+            throw new Exception("Administration Page Only!");
+
+        messagesService.putMessage(adminQuestionRequest, userEmail);
+    }
 }
