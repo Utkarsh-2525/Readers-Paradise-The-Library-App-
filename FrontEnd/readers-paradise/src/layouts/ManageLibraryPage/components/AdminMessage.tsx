@@ -9,7 +9,7 @@ submitResponseToQuestion: any}> = (props, key) => {
 
     function submitBtn(){
         if (props.message.id !== null && response !== '') {
-            props.submitResponseToQuestion(props.message, response);
+            props.submitResponseToQuestion(props.message.id, response);
             setDisplayWarning(false);
         }
         else

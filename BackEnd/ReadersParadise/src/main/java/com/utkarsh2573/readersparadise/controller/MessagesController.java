@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/messages")
 public class MessagesController {
+
     private MessagesService messagesService;
 
     @Autowired
@@ -19,19 +20,21 @@ public class MessagesController {
     }
 
     @PostMapping("/secure/add/message")
-    public void postMessage(@RequestHeader(value = "Authorization") String token, @RequestBody Message messageRequest) {
+    public void postMessage(@RequestHeader(value="Authorization") String token,
+                            @RequestBody Message messageRequest) {
         String userEmail = ExtractJWT.payloadJWTExtraction(token, "\"sub\"");
         messagesService.postMessage(messageRequest, userEmail);
     }
 
-    @PutMapping("secure/admin/message")
-    public void putMessage(@RequestHeader(value = "Authorization") String token, @RequestBody AdminQuestionRequest adminQuestionRequest) throws Exception {
+    @PutMapping("/secure/admin/message")
+    public void putMessage(@RequestHeader(value="Authorization") String token,
+                           @RequestBody AdminQuestionRequest adminQuestionRequest) throws Exception {
         String userEmail = ExtractJWT.payloadJWTExtraction(token, "\"sub\"");
         String admin = ExtractJWT.payloadJWTExtraction(token, "\"userType\"");
-
-        if (!admin.equals("admin") || admin == null)
-            throw new Exception("Administration Page Only!");
-
+        if (admin == null || !admin.equals("admin")) {
+            throw new Exception("Administration page only.");
+        }
         messagesService.putMessage(adminQuestionRequest, userEmail);
     }
+
 }
