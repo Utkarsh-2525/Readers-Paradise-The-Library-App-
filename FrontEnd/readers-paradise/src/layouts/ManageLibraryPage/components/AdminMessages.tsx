@@ -99,7 +99,6 @@ export const AdminMessages = () => {
                     <h5>Pending Q/A: </h5>
                     {messages.map(message => (
                         <AdminMessage message={message} key={message.id} submitResponseToQuestion={submitResponseToQuestion}/>
-                        // <p>Questions to be answered!</p>
                     ))}
                 </>
                 :

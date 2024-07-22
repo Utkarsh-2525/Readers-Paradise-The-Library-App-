@@ -24,7 +24,7 @@ export const ManageLibraryPage = () => {
         setMessagesClick(true);
     }
 
-    if (authState?.accessToken?.claims.userType === undefined)
+    if (authState?.accessToken?.claims.userType === undefined || authState?.accessToken?.claims.userType === '')
         return <Redirect to='/login'/>
 
     return(
