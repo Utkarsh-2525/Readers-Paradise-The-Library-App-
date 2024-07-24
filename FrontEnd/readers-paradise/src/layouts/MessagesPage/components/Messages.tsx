@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import {useOktaAuth} from "@okta/okta-react";
+import { useEffect, useState } from 'react';
+import { useOktaAuth } from '@okta/okta-react';
 import MessageModel from "../../../Models/MessageModel";
 import {SpinnerLoading} from "../../utils/SpinnerLoading";
 import {Pagination} from "../../utils/Pagination";
@@ -21,7 +21,7 @@ export const Messages = () => {
     useEffect(() => {
         const fetchUserMessages = async () => {
             if (authState && authState?.isAuthenticated) {
-                const url = `http://localhost:8080/api/messages/search/findByUserEmail?userEmail=${authState?.accessToken?.claims.sub}&page=${currentPage - 1}&size=${messagesPerPage}`;
+                const url = `http://localhost:8080/api/messages/search/findByUserEmail/?userEmail=${authState?.accessToken?.claims.sub}&page=${currentPage - 1}&size=${messagesPerPage}`;
                 const requestOptions = {
                     method: 'GET',
                     headers: {

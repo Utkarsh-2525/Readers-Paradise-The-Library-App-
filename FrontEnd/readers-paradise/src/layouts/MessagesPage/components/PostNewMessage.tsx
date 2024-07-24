@@ -4,7 +4,7 @@ import MessageModel from "../../../Models/MessageModel";
 
 export const PostNewMessage = () => {
 
-    const {authState} = useOktaAuth();
+    const { authState } = useOktaAuth();
     const [title, setTitle] = useState('');
     const [question, setQuestion] = useState('');
     const [displayWarning, setDisplayWarning] = useState(false);
@@ -24,8 +24,10 @@ export const PostNewMessage = () => {
             };
 
             const submitNewQuestionResponse = await fetch(url, requestOptions);
-            if (!submitNewQuestionResponse.ok)
+            if (!submitNewQuestionResponse.ok) {
                 throw new Error('Something went wrong!');
+            }
+
             setTitle('');
             setQuestion('');
             setDisplayWarning(false);
@@ -38,43 +40,40 @@ export const PostNewMessage = () => {
 
     return (
         <div className='card mt-3'>
-            <div className="card-header">
-                Ask a question to M.Utkarsh (Admin of Reader's Paradise)
+            <div className='card-header'>
+                Post a message to the Admin Utkarsh Mishra
             </div>
-            <div className="card-body">
-                <form method="POST">
-                    {/*WARNING BANNER*/}
-                    {
-                        displayWarning &&
-                        <div className="alert alert-danger" role='alert'>
-                            All fields must be filled!
+            <div className='card-body'>
+                <form method='POST'>
+                    {displayWarning &&
+                        <div className='alert alert-danger' role='alert'>
+                            All fields must be filled out
                         </div>
                     }
-                    {/*SUCCESSFUL BANNER*/}
-                    {
-                        displaySuccess &&
-                        <div className="alert alert-success" role='alert'>
-                            Question added successfully! ;)
+                    {displaySuccess &&
+                        <div className='alert alert-success' role='alert'>
+                            Question added successfully
                         </div>
                     }
-                    <div className="mb-3">
-                        <label className="form-label">
+                    <div className='mb-3'>
+                        <label className='form-label'>
                             Title
                         </label>
-                        <input type="text" className='form-control' id='exampleFormControlInput1' placeholder='Title'
-                               onChange={e => setTitle(e.target.value)} value={title}/>
+                        <input type='text' className='form-control' id='exampleFormControlInput1'
+                               placeholder='Title' onChange={e => setTitle(e.target.value)} value={title}/>
                     </div>
-                    <div className="mb-3">
-                        <label className="form-label">
+
+                    <div className='mb-3'>
+                        <label className='form-label'>
                             Question
                         </label>
-                        <textarea id="exampleFormControlTextarea1" rows={3} onChange={e => setQuestion(e.target.value)}
-                                  value={question} className="form-control">
+                        <textarea className='form-control' id='exampleFormControlTextarea1'
+                                  rows={3} onChange={e => setQuestion(e.target.value)} value={question}>
                         </textarea>
                     </div>
                     <div>
-                        <button type='button' onClick={submitNewQuestion} className='btn btn-primary mt-3'>Submit
-                            Question
+                        <button type='button' className='btn btn-primary mt-3' onClick={submitNewQuestion}>
+                            Submit Question
                         </button>
                     </div>
                 </form>

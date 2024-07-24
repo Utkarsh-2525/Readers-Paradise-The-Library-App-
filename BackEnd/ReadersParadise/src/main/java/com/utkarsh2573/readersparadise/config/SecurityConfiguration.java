@@ -26,7 +26,9 @@ public class SecurityConfiguration {
                 configurer.requestMatchers("/api/books/secure/" +
                         "**").authenticated().requestMatchers("/api/books/**",
                         "/api/reviews/secure/**",
-                        "/api/messages/secure/**").permitAll()).oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()));
+                        "/api/messages/secure/**",
+                        "/api/admin/secure/**")
+                        .permitAll()).oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()));
 
         // add CORS filter
         http.cors(Customizer.withDefaults());
