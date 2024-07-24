@@ -14,36 +14,65 @@ Welcome to Readers Paradise - An Online Book Store! This project is a full-stack
 
 ## Features
 
-- **User Authentication**: Sign up, log in, and manage user profiles.
+- **User Authentication**: Sign up, log in, and manage user profile
+  
 - **Book Browsing**: Browse books by categories, authors, and more.
-- **Search Functionality**: Search for books by title, author, or ISBN.
-- **Book Details**: View detailed information about each book, including reviews and ratings.
+
+- **Search Functionality**: Search for books by title, author, or type of course it offers.
+
+- **Book Details**: View detailed information about each book, including description, reviews and ratings.
+
 - **Shopping Cart**: Add books to the cart and manage quantities.
+
 - **Checkout Process**: Secure payment and order confirmation.
+
 - **Order History**: View past orders and order statuses.
-- **Admin Dashboard**: Manage books, categories, and orders.
+  
+- **Admin Support**: Send messages and quesries directly to the Admin in case of any query or suggestions or for requesting any particular book..
+
+- **Admin Dashboard**:
+  <ol>
+     <li>Manage books, categories, and orders.</li>
+     <li>Get in touch with the customers directly.</li>
+     <li>Manage Users and functionality of the application.</li>
+  </ol>
 
 ## Technologies
 
-- **Frontend**: React, Redux, HTML5, CSS3, Bootstrap
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Authentication**: JWT (JSON Web Tokens)
+- **Frontend**: React, HTML5, CSS3, JavaScript
+- **Backend**: Java, Spring Boot
+- **Database**: MySQL
+- **Authentication**: JWT (JSON Web Tokens), OAUTH2, SSL
 - **Payment Gateway**: Stripe
-- **Deployment**: Docker, Kubernetes, AWS
-
-## Installation
+- **Sign In Widget**: Okta
 
 ### Prerequisites
 
-- Node.js
-- MongoDB
-- Docker (for containerization)
+- JDK
+- MySQL
+- NodeJS
+- SSL
 - Stripe account (for payment processing)
+- Okta Developer Account for sign in widget
 
-### Steps
+## Steps to run the Project
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/online-book-store.git
-   cd online-book-store
+   https://github.com/Utkarsh-2525/Readers-Paradise-The-Library-App-.git
+
+2. Move to `readersparadise` folder in `BackEnd/ReadersParadise/src/main/java/com/utkarsh2573/`
+   ```bash
+   cd BackEnd/ReadersParadise/src/main/java/com/utkarsh2573/
+
+3. Run `ReadersParadiseApplication.java` using Java supported IDE.
+
+4. Move to `src` folder in `FrontEnd/readers-paradise/`
+   ```bash
+   cd FrontEnd/readers-paradise/src
+
+5. Open the command line or terminal and execute the command:
+   ```bash
+   npm start
+
+Your Project would be running on `localhost:3000` 
