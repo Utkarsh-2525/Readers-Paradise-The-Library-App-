@@ -44,7 +44,7 @@ Welcome to Readers Paradise - An Online Book Store! This project is a full-stack
 - **Database**: MySQL
 - **Authentication**: JWT (JSON Web Tokens), OAUTH2, SSL
 - **Payment Gateway**: Stripe
-- **Sign In Widget**: Okta
+- **Sign-In Widget**: Okta
 
 ### Prerequisites
 
