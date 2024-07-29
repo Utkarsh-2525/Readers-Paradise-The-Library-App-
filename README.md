@@ -9,7 +9,6 @@ Welcome to Readers Paradise - An Online Book Store! This project is a full-stack
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Features
@@ -28,7 +27,7 @@ Welcome to Readers Paradise - An Online Book Store! This project is a full-stack
 
 - **Order History**: View past orders and order statuses.
   
-- **Admin Support**: Send messages and quesries directly to the Admin in case of any query or suggestions or for requesting any particular book..
+- **Admin Support**: Send messages and queries directly to the Admin in case of any query or suggestions or for requesting any particular book..
 
 - **Admin Dashboard**:
   <ol>
@@ -44,7 +43,7 @@ Welcome to Readers Paradise - An Online Book Store! This project is a full-stack
 - **Database**: MySQL
 - **Authentication**: JWT (JSON Web Tokens), OAUTH2, SSL
 - **Payment Gateway**: Stripe
-- **Sign In Widget**: Okta
+- **Sign-In Widget**: Okta
 
 ### Prerequisites
 
