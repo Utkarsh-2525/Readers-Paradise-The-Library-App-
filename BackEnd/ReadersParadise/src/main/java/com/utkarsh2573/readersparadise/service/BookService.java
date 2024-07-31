@@ -143,7 +143,7 @@ public class BookService {
             payment.setAmount(payment.getAmount() + (diffInTime * -1));
             paymentRepository.save(payment);
         }
-        
+
 
         checkoutRepository.deleteById(validateCheckout.getId());
 
